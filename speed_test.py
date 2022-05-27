@@ -1,4 +1,13 @@
+import os
+clear = lambda: os.system('cls')
+pipspeedtest = lambda: os.system('pip install speedtest')
+pipspeedtest()
+clear()
+pipcolorama = lambda: os.system('pip install colorama')
+pipcolorama()
+clear()
 import speedtest
+from colorama import init, Fore, Back, Style
 red="\033[1;31m"
 green="\033[1;32m"
 blue="\033[1;34m"
@@ -7,22 +16,25 @@ black="\033[1;30m"
 purple="\033[1;35m"
 even="\033[1;36m"
 white="\033[1;37m"
-print(f'''
 
+def logo():
+  print(Fore.YELLOW +'''
+  ███████╗██████╗ ███████╗███████╗██████╗     ████████╗███████╗███████╗████████╗
+  ██╔════╝██╔══██╗██╔════╝██╔════╝██╔══██╗    ╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝
+  ███████╗██████╔╝█████╗  █████╗  ██║  ██║       ██║   █████╗  ███████╗   ██║   
+  ╚════██║██╔═══╝ ██╔══╝  ██╔══╝  ██║  ██║       ██║   ██╔══╝  ╚════██║   ██║   
+  ███████║██║     ███████╗███████╗██████╔╝       ██║   ███████╗███████║   ██║   
+  ╚══════╝╚═╝     ╚══════╝╚══════╝╚═════╝        ╚═╝   ╚══════╝╚══════╝   ╚═╝   
+  ''')
 
-{red}███████╗██████╗ ███████╗███████╗██████╗     {yellow}████████╗███████╗███████╗████████╗
-██╔════╝██╔══██╗██╔════{blue}╝██╔════╝██╔══██╗    ╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝
-{green}███████╗██████╔╝█████╗  █████╗  ██║  ██║       ██║   █████╗  ███████╗   ██║   
-╚════██║██╔═══╝ ██╔══╝  {red}██╔══╝  ██║  ██║       ██║   ██╔══╝  ╚════██║   ██║   
-███████║██║     {yellow}███████╗███████╗██████╔╝       ██║   ███████╗███████║   ██║   
-╚══════╝╚═╝     {even}╚══════╝╚══════╝╚═════╝        ╚═╝   ╚══════╝╚══════╝   ╚═╝   
-                                                                              
-    {red}Youtube {green}>>{yellow} https://www.youtube.com/c/HaithamLinux
-    {even}Twitter {green}>>{yellow} Haotham_Owda
-   {blue} Telegram {green}>>{yellow} https://t.me/techcyber
-    {black}Github {green}>>{yellow} https://github.com/haithamowda
-    {red}Instagram {green}>>{yellow} haithamowda
-''')
+  print(f'''
+      {red}Youtube {green}>>{yellow} https://www.youtube.com/c/HaithamLinux
+      {even}Twitter {green}>>{yellow} Haotham_Owda
+     {blue} Telegram {green}>>{yellow} https://t.me/techcyber
+      {black}Github {green}>>{yellow} https://github.com/haithamowda
+      {red}Instagram {green}>>{yellow} haithamowda
+  ''')
+logo()
 
 test = speedtest.Speedtest()
 
