@@ -1,6 +1,6 @@
 import os
 clear = lambda: os.system('cls')
-pipspeedtest = lambda: os.system('pip install speedtest')
+pipspeedtest = lambda: os.system('pip install speedtest-cli')
 pipspeedtest()
 clear()
 pipcolorama = lambda: os.system('pip install colorama')
